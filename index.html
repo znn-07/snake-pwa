@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <title>貪吃蛇</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>🐍 貪吃蛇</h1>
+      <div id="score-board">
+        <span>分數: <b id="score">0</b></span>
+        <span>最高: <b id="high-score">0</b></span>
+      </div>
+    </header>
+
+    <canvas id="game-canvas"></canvas>
+
+    <div id="controls">
+      <button id="restart-btn">重新開始</button>
+    </div>
+
+    <div id="overlay" class="hidden">
+      <div id="overlay-content">
+        <h2 id="overlay-title">遊戲暫停</h2>
+        <p id="overlay-message">按空白鍵繼續</p>
+      </div>
+    </div>
+
+    <div id="swipe-area">
+      <button id="up-btn" class="dir-btn">▲</button>
+      <div id="mid-row">
+        <button id="left-btn" class="dir-btn">◀</button>
+        <button id="down-btn" class="dir-btn">▼</button>
+        <button id="right-btn" class="dir-btn">▶</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
